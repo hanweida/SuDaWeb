@@ -4,6 +4,7 @@ import Component1 from './components/Components1.jsx';
 import Component2 from './components/Components2.jsx'
 import Component3 from './components/Components3.jsx'
 import {BrowserRouter, Route,HashRouter,Link} from 'react-router-dom'
+import styles from './styles/main.css'
 
 export default class SliderComponent extends React.Component{
     // 构造
@@ -15,8 +16,7 @@ export default class SliderComponent extends React.Component{
 
     render(){
         return(
-
-            <div className="wapper">
+            <div className={styles.backgrounds}>
                 <div className="main">
                     <div className="leftMenu">
                         <Link to="/index">index</Link>
@@ -80,7 +80,7 @@ const Topic = ({ match }) => (
 
 ReactDom.render((
         <BrowserRouter>
-            <div>
+            <SliderComponent>
                 <ul>
                     <li><Link to="/">首页</Link></li>
                     <li><Link to="/about">关于</Link></li>
@@ -92,7 +92,7 @@ ReactDom.render((
                 <Route exact path="/" component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/topics" component={Topics}/>
-            </div>
+            </SliderComponent>
         </BrowserRouter>),
     document.getElementById("content")
 );
