@@ -4,6 +4,7 @@ import Component1 from './components/Components1.jsx';
 import Component2 from './components/Components2.jsx'
 import Component3 from './components/Components3.jsx'
 import {BrowserRouter, Route,HashRouter,Link} from 'react-router-dom'
+import {DatePicker} from 'antd'
 import styles from './styles/main.css'
 
 export default class SliderComponent extends React.Component{
@@ -79,20 +80,8 @@ const Topic = ({ match }) => (
 )
 
 ReactDom.render((
-        <BrowserRouter>
-            <SliderComponent>
-                <ul>
-                    <li><Link to="/">首页</Link></li>
-                    <li><Link to="/about">关于</Link></li>
-                    <li><Link to="/topics">主题列表</Link></li>
-                </ul>
+        <DatePicker>
 
-                <hr/>
-
-                <Route exact path="/" component={Home}/>
-                <Route path="/about" component={About}/>
-                <Route path="/topics" component={Topics}/>
-            </SliderComponent>
-        </BrowserRouter>),
+        </DatePicker>),
     document.getElementById("content")
 );
