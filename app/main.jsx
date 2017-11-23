@@ -17,7 +17,7 @@ export default class SliderComponent extends React.Component{
 
     render(){
         return(
-            <div className={styles.backgrounds}>
+            <div className={styles.backgrounds} >
                 <div className="main">
                     <div className="leftMenu">
                         <Link to="/index">index</Link>
@@ -81,7 +81,6 @@ const Topic = ({ match }) => (
 
 ReactDom.render((
         <DatePicker>
-
         </DatePicker>),
     document.getElementById("content")
 );
